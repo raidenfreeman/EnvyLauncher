@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Launcher.FileSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:conv="clr-namespace:Launcher.Converters"
+             xmlns:launcher="clr-namespace:Launcher"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" >
+    <UserControl.Resources>
+        <launcher:FileSource x:Key="FileSource" />
+        <conv:BoolToVisibilityConverter x:Key="FileSelected" OnTrue="Visible" OnFalse="Collapsed" />
+        <conv:BoolToVisibilityConverter x:Key="NoFileSelected" OnTrue="Collapsed" OnFalse="Visible" />
+        <conv:PathToFilenameConverter x:Key="PathToFilename" />
+        <conv:IconToImageSourceConverter x:Key="IconToImage" />
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <Binding Source="{StaticResource FileSource}" />
+    </UserControl.DataContext>
+    <Grid>
+        <Button Name="BrowseButton" Background="Transparent" Click="SelectFile">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Name="SelectedFileIcon" MaxWidth="20" HorizontalAlignment="Center" Visibility="{Binding HasFile, Converter={StaticResource FileSelected}, Mode=OneWay}" Source="{Binding Icon, Converter={StaticResource IconToImage}, Mode=OneWay}" >
+                    <Image.Effect>
+                        <DropShadowEffect ShadowDepth="0" RenderingBias="Quality"/>
+                    </Image.Effect>
+                </Image>
+                <TextBlock Grid.Row="1" Name="SelecteFileName" HorizontalAlignment="Center" FontSize="16" Visibility="{Binding HasFile, Converter={StaticResource FileSelected}, Mode=OneWay}" Text="{Binding File, Converter={StaticResource PathToFilename}}" >
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock Grid.Row="2" Name="BrowseButtonText" Text="Browse..." FontSize="16" HorizontalAlignment="Center" Visibility="{Binding HasFile, Converter={StaticResource NoFileSelected}, Mode=OneWay}" >
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+        </Button>
+    </Grid>
+</UserControl>

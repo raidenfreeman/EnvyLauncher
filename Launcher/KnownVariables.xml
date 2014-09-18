@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Variables>
+  <Variable Name="APPDATA" Relation="Windows">The directory in which the current user's roaming profile resides. The roaming profile can be accessed by its owner on multiple computers joined to a common Windows Server domain.</Variable>
+  <Variable Name="LOCALAPPDATA" Relation="Windows">The directory in which the current user's local profile resides.</Variable>
+  <Variable Name="Path" Relation="Windows">A set of directories where executable programs are located. When a process issues a call to another program, the system searches through the value of this variable in the parent process for matching filenames and launches the specified as a child process. Only the character ; should be used to delimit this set, without whitespaces.</Variable>
+  <Variable Name="COMPUTERNAME" Relation="Windows">The name given to the current computer by its administrator.</Variable>
+  <Variable Name="USERPROFILE" Relation="Windows">The base directory of the current user's profile. It includes both local and roaming data.</Variable>
+  <Variable Name="OS" Relation="Windows">A symbolic name of the current operating system.</Variable>
+  <Variable Name="ProgramFiles" Relation="Windows">The directory in which native programs are installed by default.</Variable>
+  <Variable Name="ProgramFiles(x86)" Relation="Windows">The directory in which 32-bit programs are installed under 64-bit Windows.</Variable>
+  <Variable Name="ProgramW6432" Relation="Windows">The directory in which 64-bit programs are located. This variable allows 32-bit programs to find the actual 64-bit Program Files directory, which normally would be redirected to the 32-bit one for them.</Variable>
+  <Variable Name="CommonProgramFiles" Relation="Windows">Software vendors may use this folder to share common components between their own applications.</Variable>
+  <Variable Name="CommonProgramFiles(x86)" Relation="Windows">The 32-bit version of the directory software vendors may use to share common components between their own applications.</Variable>
+  <Variable Name="CommonProgramW6432" Relation="Windows">The 64-bit version of the directoy software vendors may use to share common components between their own applications. This variable allows 32-bit programs to find the actual 64-bit Common Program Files directory, which normally would be redirected to the 32-bit one for them.</Variable>
+  <Variable Name="SystemDrive" Relation="Windows">The drive in which system directory resides.</Variable>
+  <Variable Name="SystemRoot" Relation="Windows">The directory in which the core of the current Windows installation resides.</Variable>
+  <Variable Name="windir" Relation="Windows">The directory in which the core of the current Windows installation resides.</Variable>
+  <Variable Name="ALLUSERSPROFILE" Relation="Windows">A directory containing resources that are used by all user profiles.</Variable>
+  <Variable Name="PROGRAMDATA" Relation="Windows">A directory containing resources that are used by all user profiles.</Variable>
+  <Variable Name="USERDOMAIN" Relation="Windows">The name of the Workgroup or Windows Domain that this user belongs to.</Variable>
+  <Variable Name="USERNAME" Relation="Windows">The name of the current user.</Variable>
+  <Variable Name="HOMEPATH" Relation="Windows">The base directory of the current user's profile in the drive it resides in.</Variable>
+  <Variable Name="HOMEDRIVE" Relation="Windows">The drive in which the current user's profile directory can be found.</Variable>
+  <Variable Name="PUBLIC" Relation="Windows">A directory containing resources that are used by all user profiles.</Variable>
+  <Variable Name="PATHEXT" Relation="Windows">A set of file extensions that the operating system considers to be executable.</Variable>
+  <Variable Name="TEMP" Relation="Windows">The default temporary folder of the current user. This value must always be identical to TMP.</Variable>
+  <Variable Name="TMP" Relation="Windows">The default temporary folder of the current user. This value must always be identical to TEMP.</Variable>
+  <Variable Name="SESSIONNAME" Relation="Windows">For users logging in via a terminal server session, this contains information about the connection and the session. For directly logged on users, the value is Console.</Variable>
+  <Variable Name="LOGONSERVER" Relation="Windows">The hostname of the logon server that has authenticated the current user into the domain.</Variable>
+  <Variable Name="ComSpec" Relation="Windows">The full path name of the command line interpreter of the current system.</Variable>
+  
+  <Variable Name="AMDAPPSDKROOT" Relation="AMD">The root directory in which the AMD APP SDK resides. This is typically the directory where OpenCL libraries will be found.</Variable>
+
+  <Variable Name="GTK_BASEPATH" Relation="GTK+">The root directory of the Gtk installation on this computer.</Variable>
+
+  <Variable Name="FP_NO_HOST_CHECK" Relation="FrontPage">A FrontPage-related variable.</Variable>
+
+  <Variable Name="PSModulePath" Relation="PowerShell">The directory in which PowerShell modules reside.</Variable>
+
+  <Variable Name="C_EM64T_REDIST12" Relation="Intel">The base directory of the Intel64 compiler.</Variable>
+  <Variable Name="C_IA32_REDIST12" Relation="Intel">The base directory of the IA32 compiler.</Variable>
+
+  <Variable Name="VSSDK120Install" Relation="Visual Studio">The directory in which the Visual Studio SDK installation resides.</Variable>
+  <Variable Name="VisualStudioVersion" Relation="Visual Studio">The version of Visual Studio hosting the current process.</Variable>
+  <Variable Name="VisualStudioEdition" Relation="Visual Studio">The edition of Visual Studio hosting the current process.</Variable>
+  <Variable Name="VS120COMNTOOLS" Relation="Visual Studio">The directory in which common tools for Visual Studio 12 reside.</Variable>
+  <Variable Name="VS110COMNTOOLS" Relation="Visual Studio">The directory in which common tools for Visual Studio 11 reside.</Variable>
+  
+  <Variable Name="PROCESSOR_IDENTIFIER" Relation="CPU">A description of the CPU installed on this computer.</Variable>
+  <Variable Name="NUMBER_OF_PROCESSORS" Relation="CPU">The number of processors (or reported logical cores) installed on this computer.</Variable>
+  <Variable Name="PROCESSOR_REVISION" Relation="CPU">The revision number of the CPU installed on this computer.</Variable>
+  <Variable Name="PROCESSOR_LEVEL" Relation="CPU">The model number of the CPU installed on this computer.</Variable>
+  <Variable Name="PROCESSOR_ARCHITECTURE" Relation="CPU">The name of the architecture of the CPU installed on this computer.</Variable>
+</Variables>
