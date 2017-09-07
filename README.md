@@ -20,7 +20,7 @@
 
 ### Who do I talk to? ###
 
-* TChatzigiannakis
+* TChatzigiannakis.
 
 ### License ###
 
